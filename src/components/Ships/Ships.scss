@@ -1,0 +1,39 @@
+.shipsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  & > .ship > img {
+    width: 180px;
+    height: auto;
+    margin-right: 20px;
+  }
+}
+
+.ship {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shipsContainer {
+    & > .ship > img {
+      width: 120px;
+      height: auto;
+      margin-right: 5px;
+    }
+  }
+}

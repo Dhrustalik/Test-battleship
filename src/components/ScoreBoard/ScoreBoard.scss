@@ -1,0 +1,63 @@
+@import 'colors';
+
+.scoreBoardContainer {
+  height: 170px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+.player {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark_gray;
+
+  & > .score {
+    font-weight: bold;
+    font-size: 50px;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: inline;
+  }
+
+  .score::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 90%;
+    left: 10px;
+    bottom: 10px;
+    background-color: $dark_gray;
+  }
+
+  & > .name {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  &.player1 {
+    background-color: $green;
+  }
+
+  &.player2 {
+    background-color: $orange;
+  }
+}
+
+@media (max-width: 600px) {
+  .scoreBoardContainer {
+    height: 120px;
+    width: 80%;
+  }
+
+  .player > .score {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+  }
+}

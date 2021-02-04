@@ -1,0 +1,19 @@
+@import 'colors';
+
+.cell {
+  border: 1px solid $gray;
+  cursor: pointer;
+
+  &.cellHit {
+    background: url('../../assets/images/Hit.png');
+    background-size: cover;
+    cursor: inherit;
+  }
+
+  &.cellMiss {
+    background: url('../../assets/images/Miss.png');
+    background-size: cover;
+
+    cursor: inherit;
+  }
+}
